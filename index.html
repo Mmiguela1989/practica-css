@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Selectores de CSS
+        Universal: * para todo el documento
+
+        Tipo: selecciona la etiqueta. <p> <div> <h1> <input> <label>
+
+        Clases: para seleccionar con el punto . y la clase que tenga en la etiqueta indiferentemente si esta en un <p> <h1> o <div>
+
+        Id: para seleccionar se usa el # mas el id="" que tenga el elemento, para trabajar correctamente debos hacer que los id sean unicos y no repetirlos entre elementos. 
+
+        Atributo: se pueden crear atributos en html y desde hay llamarlos a css
+
+        Descendiente: se puede modificar elementos que esten dentro de otros elementos o clases o id o atributos o a la inversa siempre sleccionando desde afuera hacia dentro.
+
+        Pseudo-clases: son los eventos de una seleccion como :hover
+        
+    -->
+    <h1>Seleccion por etiqueta</h1>
+    <h2 class="titulo-dos">Seleccion por clase</h2>
+    <h3 id="elemento-h3">Seleccion por ID</h3>
+
+    <h3><p>desenciente</p></h3>
+
+    <div>
+        <p class="pruebaB">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi alias quas sapiente voluptatem corporis quos itaque sint vitae facilis fuga quae magni, quidem quam totam quasi ab expedita non esse!</p>
+    </div>
+
+    <div class="pruebaC">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam eius aperiam ad iusto adipisci ipsa totam assumenda. Est in velit accusantium quam culpa odit quia sunt nulla explicabo nam!</p>
+    </div>
+
+    <h4>Esta es una pseudo clase</h4>
+    <h4><b prueba="pruebaD">Este es otro ejemplo de pseudoclase</b></h4>
+
+    <button class="boton-prueba">Aceptar</button>
+
+    <h4 id="pruebaE">Seleccion por ID</h4>
+    
+    
+    <p prueba="pruebaA">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus laudantium eos libero! Ipsa, non! Totam odio hic vero nisi neque, deserunt perspiciatis, ut impedit fugit corporis soluta? Atque, fugit non.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia perspiciatis nostrum excepturi laborum minus amet fugiat in voluptate. Hic maxime voluptates distinctio voluptate quasi nostrum consequatur ducimus cupiditate impedit nulla.</p>
+
+    
+
+    <!-- Metodlogia Bem
+    
+        se hace por contenedores y se coloca el nombre del contenedor y a los hijos se le coloca el nombre del padre mas __ (2 guines bajos) y el nombre del elemento
+    
+    -->
+
+    <h2 id="Metodologia">Metodologia BEM</h2>
+
+    <div class="contac-form">
+        
+        <input type="text" class="contac-form__input">
+        <input type="password" class="contac-form__input--active">
+
+    </div>
+    <!--clase del padre-->
+    <div class="suscriber-form">
+        <!--nombre del padre con la etiqueta del hijo-->
+        <p class="suscriber-form__p">parrafo
+            <!--nombre de la clase con la etiqueta del padre y el hijo-->
+            <h2 class="suscriber-form__p-h2">hola</h2>
+        </p>
+    </div>
+    <!--Teoria de las Medidas
+        En cSS hay 2 unidades de medidas las relativas y las fijas
+
+        Relativas: son las que depende de algo y son variables. por ejemplo hay que colocarlas cuando se esta haciendo un diseño responsive para que se adapte a la pantalla del movil. las medidas relativas son rem y em.
+
+            em: por defecto 1 em son 16 px pero tambien sera el valor que le pngamos a la caja contenedora padre.
+
+            rem: tiene como referencia el root y se usa bastante.
+
+            viewport width/heigth: otra medida relativa todo lo que hace es ocupar todo el ancho y largo total de la pantalla. 
+
+        fijas: son las que son fijas como los pixiles, los mm los puntos lo cm.
+    -->
+    <!--Se le dio al contenedor-padre 10px-->
+    <div class="contac-form">
+        <!-- y el contenedor hijo 2em vale 20px y todo lo que este dentro del contenedor padre -->
+        <h2 class="contac-form__h2">Hola</h2>
+    </div>
+
+    <!--algunos atributos de las letras
+        para importar tipografias se puede ingresar a google fonts se copia el archivo el link y se pega en el head
+    -->
+
+    <div>
+        <p>Lorem ipsum dolor</p>
+    </div>
+
+    <!--Normalize
+            El navegador tiene parametros/propiedades por defecto con el margen, color, fondo, tipo letra, padding. y con el normalize vamos a resetear/reiniciar todos estos valores.
+
+            para aplicarlo hay que meterse a interet buscar normalize y descargar el codigo. 
+
+            se usa la la propiedad box-sizing: border-box para que cuando se creen box si se le agrega margin o padding esta no cambien el tamaño de la box (con la propiedad content-box revertimos esto)
+            se le agrega a img un max-width de 100%
+            se le agrega un padding de 0 y un margin de 0
+    
+    -->
+
+    <!--Teoria de cajas
+        
+        Es la misma teoria de las etiquetas en bloque y las etiquetas en linea.
+
+        a los elementos en linea no se le puede dar propiedades como heigth y a los en bloque si. 
+
+        para que los elementos en bloque se compoerten como elementos en linea esta la propiedad
+        display: inline o block para hacer lo contrario.
+    -->
+
+    <!--Prpiedades de caja
+        
+        box model: es el modelo con el que trabajamos las cajas tiene el content con la propiedad line-height, padding, border, margin
+
+        margin: auto, para centrar todas las cajas en el centro. 
+        
+    
+    
+    -->
+
+    <p id="propiedades-de-caja">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+
+    </p>
+
+    <!--outline
+        
+        es un shorhand (es una propiedad recortada por que es el conjunto de otras propiedades), es un border pero que no afecta el tamaño de las otras cajas ya que no ocupa un espacion real. 
+
+    -->
+
+    <!--position
+        Posisiona los elementos, adquiere nuevas propiedades.
+
+        static: es el valor por defecto
+
+        relative: matiene su espacio en pantalla pero mueve el contenido con 4 propiedades mas. top, lef, bottom, right, ademas adquiere la propiedad z-index
+
+        absolute: lo que hace es que el espacio reservado del contenido de la caja desaparece, el punto de referencia va a ser el contenedor o el viewport
+
+        fixed: es igual a lo que hace el absolute pero en este caso queda fijado en la pantalla cuando ahces scrol.
+
+        sticky: es una mescla en fixed y relative. 
+    
+    
+    
+    -->
+
+    <div id="caja-padre">
+        <div id="cajas" class="caja1">caja 1</div>
+        <div id="cajas" class="caja2">caja 2</div>
+        <div id="cajas" class="caja3">caja 3</div>
+        <div id="cajas" class="caja4">caja 4</div>
+
+
+    </div>
+
+    <!--porpiedad display
+        modifica el comportamiento en si de una caja en particular.
+
+        atributos: 
+
+        block
+        inline
+        inline-block: se puene uno al lado del otro. igual que los en linea pero se les puede dar un ancho y alto. y conservan el contenido. 
+
+        GRID
+        FLEX
+
+        INLINE-FLEX
+        INLINE-GIRD
+
+        
+    -->
+
+    <div id="caja-padre-inline">
+        <div id="cajasA" class="">caja 1</div>
+        <div id="cajasA" class="">caja 2</div>
+        <div id="cajasA" class="">caja 3</div>
+        <div id="cajasA" class="">caja 4</div>
+
+
+    </div>
+
+    <!--Overflow
+        Es la barra de scrolear, cuando un contenido es mas grande que el de una caja con las propiedades
+
+        auto: ocula el contenido y crea un scrol-
+    -->
+
+    <div>
+        <p id="overflow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolorem aut reprehenderit voluptates sunt laboriosam eos quia quae nobis? Eveniet perspiciatis at hic vero quibusdam quod reiciendis, vel velit praesentium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor explicabo neque porro illum, ducimus, commodi quidem iusto delectus iste ut exercitationem saepe eius! Aperiam unde neque quia quae hic!Lorem
+        </p>
+
+    </div>
+
+    <!--Float
+        sirve para colocar contenidos de bloques en linea
+    -->
+
+    <div class="float">
+        <img class="immagen" src="/assets/imagenes/gato-marron.jpg" alt="">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non blanditiis assumenda dicta inventore suscipit tempore tenetur delectus cumque fugit consequatur distinctio ab molestias nam iste aperiam ullam, at quibusdam quod? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel aperiam deserunt ad recusandae quibusdam sed nihil. Quas aliquam, tenetur, rerum libero sequi distinctio magnam nulla pariatur repellat laboriosam ipsum similique.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non blanditiis assumenda dicta inventore suscipit tempore tenetur delectus cumque fugit consequatur distinctio ab molestias nam iste aperiam ullam, at quibusdam quod? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel aperiam deserunt ad recusandae quibusdam sed nihil. Quas aliquam, tenetur, rerum libero sequi distinctio magnam nulla pariatur repellat laboriosam ipsum similique.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non blanditiis assumenda dicta inventore suscipit tempore tenetur delectus cumque fugit consequatur distinctio ab molestias nam iste aperiam ullam, at quibusdam quod? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel aperiam deserunt ad recusandae quibusdam sed nihil. Quas aliquam, tenetur, rerum libero sequi distinctio magnam nulla pariatur repellat laboriosam ipsum similique.
+    </div>
+
+    <!--pseudo-elementos
+        Es un elemento que no es un elemento porque no forman parte de dom, se pueden ver cambios visual peor no afecta al dom como el out-line.
+            los psuedo elementos se aplican a los elementos. 
+
+        ::firts-line | block
+            no funciona en los inline
+
+        ::firts-letter | block
+
+        ::placeholder
+            es un atributo que va dentro de la etiqueta html de los inputs y luego en css se le dan los valores colo, texto, fondo
+        
+        ::selection
+            sirve para daler estilos cuando se selecciona un texto dentro de cualquier etiqeuta. <p> <h1>* <inputs> se coloca directo en el css
+
+        ::after | hijos - content (necesario) - inline
+            son hijos del elemento que se le aplica. necesita la propiedad conte y son elementos inline
+
+        ::before | hijos - content (necesario) - inline
+
+
+
+    -->
+
+    <p class="ejemplo-firts">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus ullam molestias blanditiis qui eum, ex, recusandae consectetur hic aliquam similique optio aperiam itaque nisi? Cum voluptates saepe in tempore nemo!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam illo commodi unde earum quas quia at, ratione eius nisi ut voluptas necessitatibus quisquam adipisci, autem atque sunt quasi beatae quis.
+    </p>
+    <div class="after">
+    <b>
+        a 
+    </b>
+    </div>
+
+    <!--pseudo-clases
+            estan escuchando
+        
+        :hover escucha cuando el mause esta enzima y cambia el elemteto por el que este en el hover funciona en cualqueir elemento. en especial se usa para los nav
+
+        :link para colocar un color a los link que no han sido visitados
+
+        :visited para colocar un color a los link que ya fueron visitados
+
+        :active al dejar apretado un botn cambian los stilos igual que el hover pero hay que mantener presionado al boto. 
+
+        :focus funciona con los input cuando se le da clikc se activa pero queda activo.
+
+        :lang    
+    
+    -->
+
+    <div class="prueba-caja">
+        Prueba de pseudo clases
+    </div>
+
+    <div class="prueba-caja2">
+        Prueba de pseudo clases
+    </div>
+
+    <input class="prueba-caja3">
+
+    <!--objet-fit: fill
+            es una propiedad que se aplica a las imagenes principalmente
+        
+        contain: la imagen se ajusta a su tamaño real rellenado de blanco el resto del contenido. 
+
+        cover: con este atributo la imagen se ajusta al contenedor y recorta para que no se deforme. 
+
+        none: tamo los valores de la imagen y lo posiciona 
+
+        scale-down: varia entre none y contain y toma el valor mas bajo y lo pone.
+
+
+        objet-position:
+
+        left, right, top, botton
+
+        px - em - % - etc
+
+    -->
+
+
+
+
+
+
+
+
+    <footer>
+
+        Pie de pagina
+    </footer>
+        
+
+
+</body>
+</html>

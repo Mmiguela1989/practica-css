@@ -1,0 +1,280 @@
+*{  
+    color: rgb(0, 0, 0);
+    background-color: rgb(212, 203, 191);
+}
+
+h1{
+    color: rgba(255, 255, 0, 0.918);
+}
+
+p{
+    color: hsl(240, 76%, 37%);
+}
+
+.titulo-dos{
+    color: rgb(238, 64, 64);
+}
+
+#elemento-h3{
+    color: blueviolet;
+}
+
+[prueba="pruebaA"]{
+    color: darkorange;
+}
+
+h3 p {
+    color: deeppink;
+}
+
+div .pruebaB {
+    color: rgb(3, 117, 60);
+}
+
+.pruebaC p{
+    color: gold;
+}
+
+#pruebaE{
+    color: purple;
+}
+
+h4:hover{
+    color: lightseagreen;
+}
+
+h4 [prueba=pruebaD]:hover{
+    color: olive;
+}
+
+.boton-prueba{
+    color: orange;
+    background-color: orchid;
+}
+
+.boton-prueba:hover{
+    background-color: paleturquoise;
+}
+
+#Metodologia{
+    color: black;
+}
+
+.contac-form__input:first-child{
+    color: red;
+}
+
+.contac-form__input--active{
+    color: rgb(255, 230, 0);
+}
+
+.contac-form{
+    font-size: 10px;
+}
+
+.contac-form__h2{
+    font-size: 2em;
+
+}
+
+footer{
+    margin: 100px;
+    padding: 100px;
+    display: block;
+}
+div p{
+    color: royalblue;
+    font-size: 2em; /* Tamaño letra */
+    font-family: Georgia; /* tipo letra */
+    line-height: 1; /* lo que ocupa la letre referente a su espacio */
+    font-weight: 400; /* grosor letra */
+}
+
+#propiedades-de-caja{
+    background-color: blueviolet;
+    padding: 40px 20px;
+    
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1em;
+    margin: 3em;
+    color: rgb(0, 255, 0);
+    border-radius: 20px;
+    border: 3px solid black;
+    box-shadow: 5px 10px 15px 8px black;
+    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    
+}
+
+#caja-padre{
+    width: 600px;
+    height: 380px;
+    display: block;
+    color: white;
+    font-size: 30px;
+    
+    
+}
+
+
+.caja1{
+    width: 120px;
+    height: 120px;
+    background-color: brown;
+    position: absolute
+    
+    
+}
+
+.caja2{
+    width: 120px;
+    height: 120px;
+    background-color: yellow;
+    position: relative;
+    top: 20px;
+    left: 40px;
+    z-index: 10;
+    
+}
+
+.caja3{
+    width: 120px;
+    height: 120px;
+    background-color: rgb(1, 170, 255);
+    position: relative;
+
+}
+
+.caja4{
+    width: 120px;
+    height: 120px;
+    background-color: violet;
+}
+
+
+#caja-padre-inline{
+    width: 600px;
+    height: 200px;
+    
+}
+
+#cajasA{
+    width: 120px;
+    height: 120px;
+    background: violet; 
+    margin: 3px;
+    display: inline-block; 
+    color: yellow;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+#overflow{
+    width: 350px;
+    height: 350px;
+    border: solid 2px yellow;
+    margin: auto;
+    margin-top: 30px;
+    overflow: auto;
+    margin-bottom: 30px;
+
+}
+
+
+.float {
+    margin: auto;
+    margin-top: 30px;
+    border: 4px solid goldenrod;
+    background-color: gray;
+    width: 50%;
+    padding: 20px;
+    
+}
+
+.float .immagen{
+    float: right;
+    width: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.ejemplo-firts::first-line{
+    color: greenyellow;
+}
+
+.ejemplo-firts::first-letter{
+    font-size: 50px;
+}
+
+.ejemplo-firts{
+    font-size: 20px;
+    margin: 20px;
+
+}
+
+b{
+    padding: 6px;
+    width: 100%;
+    font-size: 50px;
+    
+}
+
+.after{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+b::before{
+    content: "Hola";
+}
+
+b::after{
+    content: "como estas?";
+    color: hotpink;
+    background: indigo;
+}
+
+
+.prueba-caja{
+    
+    height: 200px;
+    width: 200px;
+    background: lawngreen;
+    transition: background 1s, height 1s, width 1s;
+
+}
+
+.prueba-caja:hover{
+    height: 400px;
+    width: 400px;
+    background: rgb(1, 233, 250);
+}
+
+
+.prueba-caja2{
+    
+    height: 200px;
+    width: 200px;
+    background: lawngreen;
+    transition: all 1s;
+
+}
+
+.prueba-caja2:active{
+    height: 400px;
+    width: 400px;
+    background: rgb(47, 0, 255);
+}
+
+
+.prueba-caja3{
+    margin: 20px;
+    transition: all 1s;
+
+}
+
+.prueba-caja3:focus{
+    color: lawngreen;
+    background: rgb(87, 87, 87);
+}
