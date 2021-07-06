@@ -225,11 +225,11 @@ b{
     text-align: center;
 }
 
-b::before{
+.Prueba-after-y-before::before{
     content: "Hola";
 }
 
-b::after{
+.Prueba-after-y-before::after{
     content: "como estas?";
     color: hotpink;
     background: indigo;
@@ -277,4 +277,34 @@ b::after{
 .prueba-caja3:focus{
     color: lawngreen;
     background: rgb(87, 87, 87);
+}
+
+.caja-gato{
+    width: 400px;
+    height: 500px;
+    border: solid 2px black;
+    
+}
+
+.fotogato{
+    height: 100%;
+    width: 100%;
+    object-fit: none;
+    object-position: left;
+}
+
+.caja-cursor{
+    width: 400px;
+    height: 500px;
+    border: solid 2px black;
+    margin-bottom: 200px;
+    
+}
+
+.caja-cursor:hover{
+    cursor: grab;
+}
+
+.flex-container{
+    background: lightcoral; 
 }
