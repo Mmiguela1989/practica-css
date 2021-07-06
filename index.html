@@ -336,9 +336,23 @@
     -->
 
     <!--FlexBox
-            Es una nuev forma de maquetar. tiene 2 itemes flex-container y un flex-item el container es el que va a contener todo los items, el contenedor se comporta como un bloque donse se vana  notar los cambios es dentro del contenedor en los itemes.
-            flebox tiene 2 ejes, main axis (horizontal) y el cross axis (vertical) estan compuestos por direcciones el main axis comienza en el main-star y termina en maun-end igualmente susede con el cros axis
-            con flebox lo que se hace es invertir las direcciones 
+        Es una nuev forma de maquetar. tiene 2 itemes flex-container y un flex-item el container es el que va a contener todo los items, el contenedor se comporta como un bloque donse se vana  notar los cambios es dentro del contenedor en los itemes.
+        flebox tiene 2 ejes, main axis (horizontal) y el cross axis (vertical) estan compuestos por direcciones el main axis comienza en el main-star y termina en main-end igualmente susede con el cros axis
+        con flebox lo que se hace es invertir las direcciones
+
+        propiedades de flex-container:
+
+        flex-direction: se encarga de cambiar la direcion entre el main axis y cros axis row es el valor por defecto y column para cambiarlos como columna el row-reverse cambia su direccion en horizontal.
+
+        flex-wrap: sirve para hacer responsive el diseño de la pagina e ir colocando el contenido por debajo respetando las medidas.  no-wrap: conserva las medidas pero no es resposive se oculta el contenido -wrap-reverse: clas vajas van para arriba. 
+
+        flex-flow: sirve para acortar las dos propiedades anteriores. flex-direction y flex-wrap
+
+        justify-content: center, space-arround, space-betwenn, space-evenly, (main axis) sirve para acomodar el contedido dentro del contenedor posicionalos.
+
+        aling-items: flex-star, center, flex-end, stretch, baseline (cross axis), funciona para alinear el contenido dentro del contenedor pero de arribo hacia abajo al igual que el alin-content la diferencia es que el primero es para una sola linea y el segundo para 2 lineas o mas.
+
+        aling-content:
 
 
     -->
@@ -353,6 +367,33 @@
 
     </div>
 
+    <!--Propiedades de flex-items
+        Se puede modificar las propiedades de cada item en particular darles otras propiedades como ancho, largo, hacer que se posicionen, formar un menu, aside, seccion principal y footer. se le dan las propiedades el flex-item
+
+        align-self: (cross axis) posiciona en la columna
+
+        margin-direction: auto -> margin = contenedor = tamaño de la caja en el eje en que corre. 
+
+        flex-grow: (espacio asignado + sobrante / grows ) en el main axis (agarra el espacio sobrante y lo reparte en las cajas que quedan. )
+
+        flex-shrink: espacio que se usa en el main axis (define que espacio ocupa cada una)
+
+        flex-basic: medicion antes de encogerse en auto (defect value), agarra el width, y si no tiene mas prioridad (main axis) es como el width pero es mas importante por que en rango puede mas y reparte por igual que en todas. 
+
+        flex: es el acortador para colocar flex-grow: flex-shrink flex-basic
+
+        order: como el z index pero en el eje en el que apunta el main axis ordena las cajas de ordena de alante hacia aotras o vicecersa en el eje horizontal. 
+
+    
+    -->
+
+    <!--ejemplo de formulario con flex
+        
+    
+    
+    -->
+
+    
 
 
 
