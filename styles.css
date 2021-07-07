@@ -322,9 +322,26 @@ b{
 
 .grid-container{
     display: grid;
+    grid-template-columns: 150px 150px 150px 1fr;
     grid-template-rows: 150px 150px 150px;
+    margin: 10px;
+    gap: 10px;
 }
 
 .grid-item{
     border: 2px solid #000;
+    background-color: #999;
 }
+
+.grid-item:first-child{
+    background-color: #900;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.grid-item:nth-child(2){
+    background: #890;
+    grid-column: 3 / 5;
+}
+
+
